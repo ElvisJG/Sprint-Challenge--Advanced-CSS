@@ -1,6 +1,6 @@
 // Home Content
 
-.home {
+.container-home {
 
   .intro {
 
@@ -10,6 +10,9 @@
 
     p {
       padding:0 15px;
+    }
+    img {
+      width: 100%;
     }
   
   }
@@ -58,7 +61,12 @@
       }
 
       .btn {
+        .btn(@porcelain, @btn-bg-color, @btnpadding);
+        padding: 1.2rem 0;
+        justify-self: flex-start;
+        align-self: flex-start;
       }
+
     }
 
     .walk-img {
