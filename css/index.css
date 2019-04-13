@@ -144,7 +144,7 @@ html {
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #5E6164;
 }
 h1,
@@ -152,7 +152,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   color: #23293B;
 }
 h2 {
@@ -171,15 +171,7 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-@media (max-width: 500px) {
-  .container,
-  .home {
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid red;
-  }
-}
-.nav-container {
+header {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -190,42 +182,65 @@ p {
   padding: 0 auto;
   background: #F1F1F1;
 }
-.nav-container .top-box {
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
+}
+header .top-box {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   width: 800px;
 }
-.nav-container .top-box nav {
+@media (max-width: 500px) {
+  header .top-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+}
+header .top-box nav {
   display: flex;
   align-items: center;
   float: right;
 }
-.nav-container .top-box nav a {
+header .top-box nav a {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
   margin: 0rem 2rem;
   padding: 0 1.2rem 0;
 }
-.nav-container .top-box nav a:hover {
+header .top-box nav a:hover {
   text-decoration: underline;
   color: black;
 }
 @media (max-width: 500px) {
-  .nav-container .top-box nav a {
-    align-self: center;
+  header .top-box nav a {
     margin: 0 auto;
+    padding: 0 2rem 0;
   }
 }
-.nav-container .top-box h1 {
+header .top-box h1 {
   font-size: 5rem;
   padding-bottom: 1rem;
 }
 @media (max-width: 500px) {
-  .nav-container .top-box h1 {
+  header .top-box h1 {
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 500px) {
+  header .top-box h1 {
     font-size: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    padding: 0 auto;
   }
 }
 footer {
@@ -238,10 +253,20 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.container,
-.home {
-  display: flex;
-  width: 100%;
+@media (max-width: 500px) {
+  footer {
+    border-radius: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .container,
+  .home {
+    width: 100%;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
 }
 .container .main-header,
 .home .main-header {
@@ -249,23 +274,51 @@ footer {
   flex-flow: column nowrap;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .container .main-header,
+  .home .main-header {
+    width: 100%;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+}
+.container .intro .buggy,
+.home .intro .buggy {
+  width: 100%;
+}
 .container .intro h2,
 .home .intro h2 {
   padding: 15px;
+}
+@media (max-width: 500px) {
+  .container .intro h2,
+  .home .intro h2 {
+    padding: 1rem auto;
+  }
 }
 .container .intro p,
 .home .intro p {
   padding: 0 15px;
 }
-.container .intro img,
-.home .intro img {
-  width: 100%;
+@media (max-width: 500px) {
+  .container .intro p,
+  .home .intro p {
+    padding: 1rem auto;
+  }
 }
 .container .space-images,
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .container .space-images,
+  .home .space-images {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 }
 .container .space-images img,
 .home .space-images img {
@@ -277,7 +330,9 @@ footer {
 @media (max-width: 500px) {
   .container .space-images .blast,
   .home .space-images .blast {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem 0;
   }
   .container .space-images .sky,
   .home .space-images .sky,
@@ -289,6 +344,12 @@ footer {
 .container .visit-planets,
 .home .visit-planets {
   padding: 15px;
+}
+@media (max-width: 500px) {
+  .container .visit-planets,
+  .home .visit-planets {
+    margin: 0 auto;
+  }
 }
 .container .visit-planets h3,
 .home .visit-planets h3 {
@@ -305,14 +366,19 @@ footer {
   padding: 50px 60px;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 500px) {
   .container .walk,
   .home .walk {
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     flex-flow: column-reverse;
-    padding: 0 auto;
+    padding: 2rem 0;
     margin: 0 auto;
-    width: 100%;
   }
 }
 .container .walk .walk-text,
@@ -369,7 +435,7 @@ footer {
   .container .walk .walk-text .btn,
   .home .walk .walk-text .btn {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0;
     margin-top: 3rem;
     border-radius: 0px;
   }
@@ -397,4 +463,12 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+}
+@media (max-width: 500px) {
+  .container .walk .walk-img img,
+  .home .walk .walk-img img {
+    border-radius: 20px;
+  }
 }

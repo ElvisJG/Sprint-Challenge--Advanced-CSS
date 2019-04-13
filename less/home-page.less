@@ -1,23 +1,43 @@
 // Home Content
 
-.container, .home {
-  display: flex;
-  width: 100%;
-  
+.container,
+.home {
+
+  @media @phone {
+    width: 100%;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+
   .main-header {
     .flex-center-column();
+      @media @phone {
+        width: 100%;
+        padding: 0 auto;
+        margin: 0 auto;
+      }
   }
 
   .intro {
+
+    .buggy {
+      width: 100%;
+    }
+
     h2 {
       padding: 15px;
+
+      @media @phone {
+        padding: 1rem auto;
+      }
     }
 
     p {
       padding: 0 15px;
-    }
-    img {
-      width: 100%;
+
+      @media @phone {
+        padding: 1rem auto;
+      }
     }
   }
 
@@ -25,6 +45,10 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media @phone {
+      .flex-center-column();
+    }
 
     img {
       width: 28%;
@@ -34,7 +58,9 @@
     }
     @media @phone {
       .blast {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem 0;
       }
       .sky,
       .launch {
@@ -45,6 +71,10 @@
 
   .visit-planets {
     padding: 15px;
+
+    @media @phone {
+      margin: 0 auto;
+    }
 
     h3 {
       margin-top: 11px;
@@ -61,12 +91,16 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 
     @media @phone {
+      width: 90%;
+      .flex-center-column();
       flex-flow: column-reverse;
-      padding: 0 auto;
+      padding: 2rem 0;
       margin: 0 auto;
-      width: 100%;
+
     }
 
     .walk-text {
@@ -106,7 +140,7 @@
 
         @media @phone {
           width: 100%;
-          padding: 2rem;
+          padding: 2rem 0;
           margin-top: 3rem;
           border-radius: 0px;
         }
@@ -127,11 +161,16 @@
         width: 100%;
         margin: 0 auto;
       }
-
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        align-self: center;
+        justify-self: center;
+
+        @media @phone {
+          border-radius: 20px;
+        }
       }
     }
   }

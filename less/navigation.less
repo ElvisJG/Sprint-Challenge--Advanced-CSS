@@ -1,5 +1,5 @@
 // Navigation code here
-.nav-container {
+header {
   .flex-center-column();
   align-items: center;
   width: 100%;
@@ -8,10 +8,20 @@
   padding: 0 auto;
   background: @sea-shell;
 
+  @media @phone {
+    width: 100%;
+  }
+
   .top-box {
     .flex-center-column();
     align-items: center;
     width: 800px;
+
+    @media @phone {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 auto;
+    }
 
     nav {
       display: flex;
@@ -31,8 +41,8 @@
 
           }
           @media @phone {
-            align-self: center;
             margin: 0 auto;
+            padding: 0 2rem 0;
         }
       }
     }
@@ -41,8 +51,18 @@
       padding-bottom: 1rem;
 
       @media @phone {
+        padding: 1rem 0;
+      }
+
+
+
+      @media @phone {
         font-size: 4rem;
       }
     }
+  }
+  @media @phone {
+    width: 100%;
+    padding: 0 auto;
   }
 }
