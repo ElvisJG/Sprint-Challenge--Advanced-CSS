@@ -23,16 +23,26 @@
         color: black;
         font-size: 1.5rem;
         margin: 0rem 2rem;
+        padding: 0 1.2rem 0;
 
         &:hover {
           text-decoration: underline;
           color: black;
+
+          }
+          @media @mobile {
+            align-self: center;
+            margin: 0 auto;
         }
       }
     }
     h1 {
       font-size: 5rem;
       padding-bottom: 1rem;
+
+      @media @mobile {
+        font-size: 4rem;
+      }
     }
   }
 }
